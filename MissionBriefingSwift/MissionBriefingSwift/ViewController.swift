@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var agentName: UITextField!
     @IBOutlet var agentPassword: UITextField!
@@ -16,17 +16,32 @@ class ViewController: UIViewController {
     @IBOutlet var missiongBriefingText: UITextView!
         @IBOutlet var TIYLogo: UIImageView!
     
+       override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        agentName.text = " "
+        greetingLabel.text = " "
+        missiongBriefingText.text = " "
+        
+    
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func authenticateButton(sender: AnyObject) {
-        if  agentName .isFirstResponder() {
-            agentName .resignFirstResponder()
+        if  agentName.isFirstResponder() {
+            agentName.resignFirstResponder()
+            
         }
-        if agentName != "" && agentPassword != ""{
-       let lastName = agentName.text?.componentsSeparatedByString(" ").last
+        if agentName != " " && agentPassword != " "{
+            let lastName = agentName.text?.componentsSeparatedByString(" ").last
             
             greetingLabel.text = "Good Evening, Agent \(lastName!)"
             
             
-            missiongBriefingText.text = "This mission will be an arduous one, fraught with peril. You will cover much strange and unfamiliar territory. Should you choose to accept this mission, Agent %@, you will certainly be disavowed, but you will be doing your country a great service. This message will self destruct in 5 seconds."
+            missiongBriefingText.text = "This mission will be an arduous one, fraught with peril. You will cover much strange and unfamiliar territory. Should you choose to accept this mission, Agent \(lastName!), you will certainly be disavowed, but you will be doing your country a great service. This message will self destruct in 5 seconds."
             let authenticatedBackground = UIColor.greenColor()
             
             view.backgroundColor = authenticatedBackground
@@ -36,22 +51,13 @@ class ViewController: UIViewController {
             view.backgroundColor = accesDeniedBackgroundColor
             
         }
-    
-    
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        agentName.text = ""
-        greetingLabel.text = ""
-        missiongBriefingText.text = ""
+        
         
     }
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+   
 
 
 }

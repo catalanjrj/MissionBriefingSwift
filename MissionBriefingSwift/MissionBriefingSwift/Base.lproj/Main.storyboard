@@ -41,8 +41,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5rv-ss-Jkx">
-                                <rect key="frame" x="180" y="476" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5rv-ss-Jkx">
+                                <rect key="frame" x="180" y="476" width="240" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="9yv-ap-rh8"/>
                                 </constraints>
@@ -63,9 +63,10 @@
                             <constraint firstItem="RDj-Es-FMD" firstAttribute="top" secondItem="WbM-Ke-VEI" secondAttribute="bottom" constant="39" id="3Yo-Aw-77Z"/>
                             <constraint firstItem="4Br-gr-RjP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4m0-d0-oXN"/>
                             <constraint firstItem="4Br-gr-RjP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5wZ-Xg-ddE"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="5rv-ss-Jkx" secondAttribute="bottom" constant="-4" id="8r1-t7-1ne"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5rv-ss-Jkx" secondAttribute="bottom" constant="34" id="8r1-t7-1ne"/>
                             <constraint firstItem="8uZ-Ax-8ix" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FEQ-ma-07T"/>
                             <constraint firstItem="8uZ-Ax-8ix" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GFR-pn-cMx"/>
+                            <constraint firstItem="4Br-gr-RjP" firstAttribute="height" secondItem="8uZ-Ax-8ix" secondAttribute="height" id="GTF-6Z-PZH"/>
                             <constraint firstItem="8uZ-Ax-8ix" firstAttribute="top" secondItem="4Br-gr-RjP" secondAttribute="bottom" constant="8" id="LtS-Fy-y7b"/>
                             <constraint firstItem="WbM-Ke-VEI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xg5-Ly-Xkn"/>
                             <constraint firstItem="xSG-1R-JCK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xo2-6w-Dln"/>
@@ -110,4 +111,7 @@
             <point key="canvasLocation" x="147" y="999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TIYLogo" width="240" height="212"/>
+    </resources>
 </document>
